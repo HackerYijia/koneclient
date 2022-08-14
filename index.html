@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>Untitled document - Google Docs</title>
+<link rel="icon" type="image/png" href="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="kone client is a custom version of Eaglercraft which is real Minecraft 1.5.2 that you can play in your browser (this includes school chromebooks). You can join real Minecraft 1.5.2 servers if it has a special version of this thing called Bungeecord." />
+<meta name="keywords" content="minecraft, applet, chromebook, lax1dude, games, eaglercraft, eagler" />
+<meta name="author" content="LAX1DUDE" />
+<meta property="og:title" content="kone client" />
+<meta property="og:locale" content="en-US" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://media.discordapp.net/attachments/378764518081429506/932053915061587978/thumbnail2.png" />
+<meta property="og:description" content="kone client is a custom version of Eaglercraft which is real Minecraft 1.5.2 that you can play in your browser (this includes school chromebooks). You can join real Minecraft 1.5.2 servers if it has a special version of this thing called Bungeecord." />
+<!-- Change this: <meta property="og:url" content="https://example.com/" /> -->
+<style type="text/css">
+	a.nolink, a.nolink:link, a.nolink:hover, a.nolink:visited {
+		color: white;
+	}
+	a.nolink:active {
+		color: yellow;
+	}
+	#available {
+		position: fixed;
+		background-color: #ffffff;
+		top: 0px;
+		right: 0px;
+		padding: 0px 0px;
+		width:min(100vw,210vh); 
+		height:min(201vw,100vw);
+		color:white;
+		font-family: Arial;
+	}
+	#available_hide {
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		margin: 10px;
+		padding: 2px;
+		font-weight: bold;
+		border: 1px solid #ffffff;
+		font-family: Arial;
+		font-size: 12px;
+		line-height: 12px;
+		cursor: pointer;
+		background-color: #ffffff;
+	}
+	</style>
+	
+
+<script type="text/javascript" src="classes.js"></script>
+<script type="text/javascript" src="eagswebrtc.js"></script>
+<script>
+	setInterval(function(){
+		window.onbeforeunload = null;
+	},1);
+</script>
+
+<script type="text/javascript">
+if(document.location.href.startsWith("file:")) {
+alert("You're not supposed to 'open' this file in your browser. Please upload this folder to your HTTP(s) server and access it via the internet. This is not a bug, please read the documentation");
+}else {
+	alert("Update Changelog: \n ----- Eaglercraft 22w30a ----- \n - VOICE CHAT (if you press v, you can talk to your friends, to enable it, join a server and press esc to see the voice chat menu) \n - if you press \"`\" or \"backtick\" (The key to the left of \"1\"), a screen with a picture of google docs will appear. \n Also you need to wait till the loading is done to test it out. \n - Bug Fixes");
+	alert("Minecraft keeps Crashing or giving you errors? Try holding shift and clicking on reload \n Note: Also if a box appears saying that you might loose data, keep holding shift and click reload.");
+window.addEventListener("load", function(){
+window.minecraftOpts = [
+"game_frame","assets.epk?22w30a",
+"CgAACQAHc2VydmVycwoAAAAFCAAEbmFtZQAScGxhY2Vob2xkZXIgc2VydmVyCAACaXAAD2xvY2FsaG9zdDoyNTU2NQEAC2hpZGVBZGRyZXNzAAgACmZvcmNlZE1PVEQAEG1vdGQgc3RyaW5nIGhlcmUACAACaXAAHXdzczovL3N1cy5zaGhub3dpc25vdHRoZXRpLm1lCAAEbmFtZQAIYXl1bmJvb20BAAtoaWRlQWRkcmVzcwEIAApmb3JjZWRNT1REAAhheXVuYm9vbQAIAAJpcAAfd3NzOi8vd2ViLmFzc3BpeGVsLm5ldC9DQVBpeGVsLwgABG5hbWUACEEqc1BpeGVsAQALaGlkZUFkZHJlc3MBCAAKZm9yY2VkTU9URAAIQSpzUGl4ZWwACAACaXAAGndzczovL2JhY2t1cC5hc3NwaXhlbC5uZXQvCAAEbmFtZQAPQSpzUGl4ZWwgQmFja3VwAQALaGlkZUFkZHJlc3MBCAAKZm9yY2VkTU9URAAPQSpzUGl4ZWwgQmFja3VwAAgAAmlwABd3c3M6Ly9zbXAucmVtYXRyaXgudGVjaAgABG5hbWUAD1RyaWRlbnQgTmV0d29yawEAC2hpZGVBZGRyZXNzAQgACmZvcmNlZE1PVEQAD1RyaWRlbnQgTmV0d29yawAKAAhtYWluTWVudQkACHNwbGFzaGVzCAAAAAoACkRhcnZpZ2xldCEADkRhcnZpZ2xvcGhpbGUhAAtZb3UgRWFnbGVyIQALWWVlZWVlZWVlZSEAC1lvdSBZZWVsZXIhAA1FRUVFRUVFRUVFRUUhAAtZb3UgRGFydmlnIQAJWW91IFZpZ2chAAI6PgACfD4AAA=="
+];
+(function(){
+var q = window.location.search;
+if(typeof q === 'string' && q.startsWith("?")) {
+	q = new URLSearchParams(q);
+	var s = q.get("server");
+	if(s) window.minecraftOpts.push(s);
+}
+})();
+var displayfakeschoolcanvas = false;
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 192) {
+        if (displayfakeschoolcanvas === true){
+			displayfakeschoolcanvas = false;
+			document.getElementById("available").style.display = "none";
+
+		}
+		else {
+		displayfakeschoolcanvas = true;
+		document.getElementById("available").style.display = "block";
+		}
+    }
+});
+var current_version = "22w30a";
+var user_prompted = false;
+var cache_tricker = Math.floor(Math.random() * 100000000000) + 1  +numbercounter;
+var numbercounter = 1
+setInterval(function(){
+	numbercounter = numbercounter +1;
+	cache_tricker = Math.floor(Math.random() * 100000000000) + 1  +numbercounter;
+	if (user_prompted == false) {
+		fetch('/version.txt?'+cache_tricker)
+  .then(response => response.text())
+  .then(data => {
+  	// Do something with your data
+	if (data == current_version){
+		console.log("kone client Update Manager: server version = client version ("+data+")");
+	}
+	else{
+		alert("Update available: kone client "+data+", Please reload the webpage to update kone client");
+		user_prompted = true;
+		console.log("kone client Update Manager: User Prompted.")
+	}
+  	console.log("kone client Update Manager: server version: "+data);
+  });
+	}
+	else{
+		console.log("kone client Update Manager: Update available, user already prompted.")
+	}
+},10000);
+
+
+
+if(document.location.href.startsWith("http:")) {
+	alert("You are on http, you will not be able to use voice chat because Google Chrome, Edge, Firefox, and others prevent you from using your microphone.");
+}
+
+document.getElementById("available_hide").addEventListener("click", function() {
+	document.getElementById("available").style.display = "none";
+});
+main();
+});}
+</script>
+</head>
+<body style="margin:0px;width:100vw;height:100vh;" id="game_frame">
+	<div id="available" style="display:none;">
+		<p id="available_hide">&nbsp;&nbsp;</p>
+		<img src="docs.png" width="100%" height="56.25%">
+		</div>
+</body>
+</html>
